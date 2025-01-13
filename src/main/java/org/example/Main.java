@@ -34,7 +34,7 @@ public class Main {
             } else if (input.equals("go to")) {
                 LinkTo();
             } else if (input.isEmpty()) {
-                System.out.println("Короткая ссылка готова");
+                System.out.println("Конец");
             } else {
                 System.out.println("Моя твоя не понимать");
             }
