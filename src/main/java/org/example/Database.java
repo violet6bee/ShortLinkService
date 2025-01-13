@@ -28,15 +28,20 @@ public class Database {
     }
 
     // удалить ссылку
-    public void deleteLink (UUID userUuid, String shortLink) {
+    public boolean deleteLink (UUID userUuid, String shortLink) {
         HashMap<String, Object[]> links = information.get(userUuid);
+        if (links.get(shortLink) == null) {
+            return false;
+        }
         links.remove(shortLink);
+        return true;
     }
 
-     // обновление значения лимита ссылки
+     // обновление и редактирование значения лимита ссылки
     public void updateLimit (UUID userUuid, int limit, String shortLink) {
         Object[] link = information.get(userUuid).get(shortLink);
         link[2] = limit;
     }
+
 }
 
