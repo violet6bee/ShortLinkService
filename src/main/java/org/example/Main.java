@@ -33,6 +33,8 @@ public class Main {
                 insertLink();
             } else if (input.equals("go to")) {
                 LinkTo();
+            } else if (input.isEmpty()) {
+                System.out.println("Короткая ссылка готова");
             } else {
                 System.out.println("Моя твоя не понимать");
             }
